@@ -161,6 +161,7 @@ function cambio(numero){
     }
     if(numero == 10){
         const column = document.getElementById('columna-3');
+        const hola = F;
         const img = document.getElementById('inter-3-2');
         img.setAttribute('src',fotos[orden2[1]]);
         img.setAttribute('class','mostrar');
@@ -245,7 +246,7 @@ function cambio(numero){
     }
 
     perder();
-  puntuacion();
+    puntuacion();
 
 }
 
@@ -263,16 +264,16 @@ function select(src){
         case"img/hamster.jpeg":
             seleccion = "hamster";
             break;
-         case"img/guacamaya.jpg":
+        case"img/guacamaya.jpg":
             seleccion = "guacamaya";
             break;
         case"img/perico.jpg":
             seleccion = "perico";
             break;
-         case"img/conejilla.jpg":
+        case"img/conejilla.jpg":
             seleccion = "conejilla";
             break;
-         case"img/cerdo.jpg":
+        case"img/cerdo.jpg":
             seleccion = "cerdo";
             break;
     }
@@ -284,33 +285,33 @@ function confirm(src){
             confirmacion = 'perro';
             break;
         case"img/gato.jpg":
-        confirmacion = "gato";
+            confirmacion = "gato";
             break;
         case"img/conejo.jpg":
-        confirmacion = "conejo";
+            confirmacion = "conejo";
             break;
         case"img/hamster.jpeg":
-        confirmacion = "hamster";
+            confirmacion = "hamster";
             break;
-         case"img/guacamaya.jpg":
-         confirmacion = "guacamaya";
+        case"img/guacamaya.jpg":
+            confirmacion = "guacamaya";
             break;
         case"img/perico.jpg":
-        confirmacion = "perico";
+            confirmacion = "perico";
             break;
-         case"img/conejilla.jpg":
-         confirmacion = "conejilla";
+        case"img/conejilla.jpg":
+            confirmacion = "conejilla";
             break;
-         case"img/cerdo.jpg":
-         confirmacion = "cerdo";
+        case"img/cerdo.jpg":
+            confirmacion = "cerdo";
             break;
     }
-   
+
 }
 
 function limpiar(){
-   seleccion = undefined;
-   confirmacion = undefined;
+    seleccion = undefined;
+    confirmacion = undefined;
 }
 
 function puntuacion(){
@@ -324,14 +325,14 @@ function puntuacion(){
             if(confirmacion == seleccion){
                 puntos++;
                 racha++;
-              limpiar();
-              perder();
-              count = 0;
-              rach.innerText = 'Racha: '+racha;
+                limpiar();
+                perder();
+                count = 0;
+                rach.innerText = 'Racha: '+racha;
                 punt.innerText = 'Puntos: '+puntos;
             }else{
                 vidas--;
-                racha =0; 
+                racha =0;
                 limpiar();
                 inter(mantener)
                 perder();
@@ -350,22 +351,22 @@ function puntuacion(){
                 limpiar();
                 inter(mantener)
                 perder();
-               
+
             }
         }
 
     }else{
         if(confirmacion != undefined && count>1){
             vidas--;
-                vid.innerText = 'Vidas: '+vidas;
-                count =0;
-                racha =0;
-                rach.innerText = 'Racha: '+racha;
-                inter(mantener);
-                perder();
-                limpiar();
-                
-              
+            vid.innerText = 'Vidas: '+vidas;
+            count =0;
+            racha =0;
+            rach.innerText = 'Racha: '+racha;
+            inter(mantener);
+            perder();
+            limpiar();
+
+
         }
     }
 
